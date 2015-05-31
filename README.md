@@ -1,2 +1,2 @@
 # project_X
-seat selection
+seat selections
