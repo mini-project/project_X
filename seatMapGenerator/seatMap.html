@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+  .seat{
+    width: 25px;
+    height: 25px;
+    background: #ccc;
+    border: 1px solid #aaa;
+    display: inline-block;
+    float: left;
+    margin: 3px;
+  }
+    
+    
+	.seat.noSeat{
+		background: transparent;
+	}
+	.seat.selected {
+      background: #888;
+    }
+    .row {
+      overflow:hidden;
+        background: #abc;
+      padding: 5px 0;
+      display: inline-block;
+    }
+    .clearfix::after {content:'';
+      display:block}
+   #seatLayWrap{
+     float: left;
+  background-color: rgb(130, 155, 175);
+   }
+    
+	.jsonSeatMapWrap{
+		float: right;
+		margin: 15px;
+	}
+  </style>
+</head>
+<body>
+<h2>Seat Layout Generator</h2>
+<div class="jsonSeatMapWrap">
+<textarea rows="40" cols="40" id="jsonSeatMap" placeholder="JSON seat Map"></textarea>
+</div>
+
+  No. of rows <input type="text" id="nRows" value="4">
+  <br/>
+  No. of cols <input type="text" id="nCols" value="4">
+  </br>
+  <button type="button" id="gen">Generate basic layout</button>
+  <button type="button" id="addSeats">Add seats</button>
+  <button type="button" id="removeSeats">Remove seats</button>
+  <button type="button" id="generateMap">Generate seat Map</button>
+<br/>
+<br/>
+  <div id="seatLayWrap">
+  </div>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
